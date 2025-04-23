@@ -1,0 +1,30 @@
+div > span {
+    font-size: 2rem;
+    text-transform: uppercase;
+    animation: glow 2s ease-in-out infinite;
+    animation-delay: var(--delay);
+}
+
+.text-container {
+    height: 100vh;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+}
+
+@keyframes glow {
+    0%,
+    100% {
+        color: var(--color);
+        text-shadow: 0 0 10px #0652dd, 0 0 50px #0652dd, 0 0 100px #0652dd;
+
+    }
+    10%,
+    90% {
+        color: black;
+        text-shadow: none;
+    }
+}
